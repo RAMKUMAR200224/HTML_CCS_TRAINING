@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Added for better layout control */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-links {
+    display: flex;
+    column-gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #1D232C;
+    font-weight: 500;
+}
+
+.navbar-menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Side Navbar */
+.side-navbar {
+    background-color: #1D232C;
+    width: 60%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    padding: 20px;
+    color: white;
+    transition: 0.5s; /* Sped up transition for better UX */
+    z-index: 20;
+}
+
+.side-navbar-link {
+    margin-bottom: 30px;
+}
+
+.side-navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    background-color: #f2f4f7;
+}
+
+.header-button {
+    padding: 10px 30px;
+    margin-top: 20px;
+    background-color: #1D232C;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.header-image {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Service Section */
+.service {
+    padding: 40px;
+}
+
+.service-container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.service-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-container2 div {
+    background-color: #f2f4f7;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1;
+}
+
+.service-container2 i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* New Arrival */
+.new-arrival {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.new-arrival-container {
+    position: relative;
+    flex-basis: 22%;
+}
+
+.new-arrival-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.new-arrival button {
+    padding: 10px 20px;
+    color: #1D232C;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfectly centers the button */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.new-arrival button:hover {
+    opacity: 1;
+}
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+.news input{
+    padding:  11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid black 3px;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+.news button{
+    margin-top: 10px;
+    color: #f2f4f7;
+    background-color: #1D232C;
+}
+.footer{
+    margin-top:20px ;
+    padding: 40px;
+    background-color: #1D232C;
+    color: white ;
+}
+.product-section{
+    margin-top: 20px;
+}
+.product-search{
+    width: 80%;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+}
+.product-search input{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+.product-search input:focus{
+    outline: none;
+}
+.products{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.products-box{
+    text-align: center;
+    flex-basis: 20%;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar-menu-toggle {
+        display: block;
+    }
+    .navbar-links {
+        display: none;
+    }
+    .header-image-container {
+        display: none;
+    }
+    .service-container1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .service-container2 {
+        flex-direction: column;
+    }
+    .new-arrival-container {
+        flex-basis: 45%;
+    }
+}
